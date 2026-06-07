@@ -60,7 +60,7 @@ After comparing multiple models, Random Forest was selected as the final model.
 - notebook.ipynb – Full pipeline (feature engineering, training, evaluation)  
 - model.pkl – Final model (Random Forest – best performing model)  
 - elastic_model.pkl – ElasticNet model (reference model)  
-- mappings.pkl.gz – Compressed precomputed statistical mappings for feature engineering
+- mappings.pkl.xz – Compressed precomputed statistical mappings for feature engineering
 - report.pdf – Final project report with analysis and results  
 - requirements.txt – Required Python libraries  
 - README.md – Project documentation  
@@ -71,3 +71,4 @@ After comparing multiple models, Random Forest was selected as the final model.
 
 - Data leakage was carefully prevented during feature creation  
 - Precomputed mappings are saved in a compressed file and loaded in the prepare_data function so it can run independently without recalculating the features each time.
+- Compression (lzma) was used for the mappings file because it was too large to store in its original form
